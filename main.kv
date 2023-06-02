@@ -1,0 +1,27 @@
+<SearchScreen>:
+    
+    cols:1
+    size_hint:0.6,0.7
+    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+
+    BoxLayout:
+        orientation: 'vertical'
+        
+
+        Label:
+            text: "Şarkının İsmini giriniz:"
+        TextInput:
+            multiline:False
+            size: (25,25)
+            id:musictext
+            padding_y:25,25
+            #textin konumu
+            size_hint:1,0.5
+            #oransal boyutu
+        Button:
+            text:"ŞARKIYI ARA"
+            id:search_button
+            size_hint:1,0.5
+            on_press:
+                root.takeMusic()
+                
